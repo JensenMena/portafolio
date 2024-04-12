@@ -43,17 +43,20 @@
 html {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+
 	*,
 	*::before,
 	*::after {
 		box-sizing: inherit;
 	}
+
 	body {
 		font-family: 'Poppins', sans-serif;
 		font-size: var(--normal-font-size);
 		margin: 0;
 		color: var(--primary-color);
 	}
+
 	ul {
 		list-style: none;
 		margin: 0;
@@ -74,6 +77,7 @@ html {
 	&:has([name='color-scheme']:checked) {
 		color-scheme: dark;
 	}
+
 	&:has([name='color-scheme']) {
 		color-scheme: light;
 	}
@@ -82,6 +86,7 @@ html {
 /* ============= REUSABLE CLASSES ============= */
 .section {
 	padding: 4rem 0;
+
 	.section__title {
 		text-align: center;
 		margin: var(--mr-3) 0;
@@ -114,7 +119,7 @@ html {
 
 	&:hover {
 		transform: translateY(-4px);
-		box-shadow: 0px 3px 10px #ee991a;
+		box-shadow: 0px 3px 10px #1ae0ee;
 	}
 }
 
@@ -188,12 +193,12 @@ html {
 						transition: color 0.3s;
 
 						&:hover {
-							color: #ee991a;
+							color: #1ae0ee;
 						}
 					}
 
 					.active {
-						border-bottom: 2px solid #ee991a;
+						border-bottom: 2px solid #1ae0ee;
 					}
 				}
 			}
@@ -270,7 +275,7 @@ html {
 				.navbar__toggle--darkmode-input {
 					visibility: hidden;
 
-					&:checked + label {
+					&:checked+label {
 						background: #242424;
 
 						&::after {
@@ -322,7 +327,7 @@ html {
 				.navbar__toggle--language-input {
 					visibility: hidden;
 
-					&:checked + label {
+					&:checked+label {
 						&::after {
 							left: 40px;
 							transform: translateX(-100%);
@@ -333,6 +338,7 @@ html {
 			}
 		}
 	}
+
 	.btn__open,
 	.btn__close,
 	.navbar__logo i {
@@ -340,6 +346,7 @@ html {
 		color: var(--primary-color);
 		transition: background 0.3s;
 	}
+
 	.btn__open {
 		&:hover {
 			background-color: #dfdfdf;
@@ -426,32 +433,39 @@ html {
 		position: relative;
 		row-gap: 2rem;
 		padding: var(--header-height) 0 3rem;
+
 		.home__image {
 			width: clamp(min(320px, 100%), 85vw, 445px);
 			height: auto;
 			margin: 0 auto;
 		}
+
 		.home__social {
 			position: absolute;
 			top: 10rem;
 			left: 1.2rem;
 			flex-direction: column;
 			row-gap: var(--mr-2);
+
 			.home__social-link {
 				color: #777;
 				font-size: 1.7rem;
 				transition: color 0.3s;
 				text-align: center;
+
 				&:hover {
 					color: var(--primary-color);
 				}
 			}
 		}
+
 		.home__info {
+
 			.home__title,
 			.home__description {
 				text-align: center;
 			}
+
 			.home__title {
 				margin: 0 auto;
 				margin-bottom: var(--mr-2);
@@ -464,6 +478,7 @@ html {
 				overflow: hidden;
 			}
 		}
+
 		.home__buttons {
 			text-align: center;
 		}
@@ -486,19 +501,23 @@ html {
 .about {
 	background-color: var(--bg-color-section2);
 	overflow: hidden;
+
 	.about__container {
 		.about__description {
 			text-align: center;
 		}
+
 		.about__cards {
 			margin-top: 2rem;
 			flex-direction: column;
 			gap: 2rem;
+
 			.about__card {
 				background-color: var(--bg-color-section1);
 				padding: 2rem;
 				border-radius: 5px;
 				box-shadow: 0px 10px 100px #0000001a;
+
 				.about__card--img {
 					width: 100%;
 					height: 100%;
@@ -512,10 +531,12 @@ html {
 /* ============= skills ============= */
 .skills {
 	background-color: var(--bg-color-section1);
+
 	.skills__container {
 		.skills__description {
 			text-align: center;
 		}
+
 		/* SLIDER  */
 		.skills__wrapper {
 			.skills__cards {
@@ -549,6 +570,7 @@ html {
 							padding: 8px;
 						}
 					}
+
 					.skills__card-container {
 						color: var(--bg-color-section2);
 						height: 300px;
@@ -557,6 +579,7 @@ html {
 
 					&[open] {
 						height: 400px;
+
 						.skills__cards-title {
 							height: auto;
 						}
@@ -564,13 +587,16 @@ html {
 				}
 			}
 		}
+
 		.skills__tags {
 			flex-direction: column;
 			margin-top: var(--mr-4);
+
 			.skills__tags-container {
 				flex-wrap: wrap;
 				gap: 1rem;
 			}
+
 			.skills__tag {
 				display: inline-block;
 				padding: 0.75rem 1.5rem;
@@ -587,12 +613,16 @@ html {
 /* ============= Projects ============= */
 .projects {
 	background-color: var(--bg-color-section2);
+
 	.projects__container {
 		gap: 2rem;
+
 		.projects__inner {
 			margin: 0;
+
 			.projects__image {
 				border-radius: 5px;
+
 				img {
 					width: 100%;
 					height: auto;
@@ -604,12 +634,15 @@ html {
 					animation-range: entry 25% cover 35%;
 				}
 			}
+
 			.projects__info {
 				padding: 1rem;
+
 				.projects__buttons {
 					display: flex;
 					flex-wrap: wrap;
 					gap: 1rem;
+
 					.projects__button {
 						color: var(--bg-color-section2);
 						background-color: var(--primary-color);
@@ -637,8 +670,10 @@ html {
 /* ============= Contact ============= */
 .contact {
 	background-color: var(--bg-color-section1);
+
 	.contact__container {
 		gap: 2rem;
+
 		.contact__info {
 			.contatc__info-data {
 				font-style: normal;
@@ -689,13 +724,16 @@ html {
 	background-color: #111;
 	color: #efefef;
 	padding-bottom: 2rem;
+
 	.footer__container {
 		gap: 2rem;
+
 		.footer__info {
 			.footer__title {
 				font-size: 1.5rem;
 			}
 		}
+
 		.footer__social {
 			.footer__social-list {
 				display: flex;
@@ -705,10 +743,12 @@ html {
 				.footer__social-link {
 					color: var(--bg-color-section2);
 					transition: text-shadow 0.3s;
+
 					&:hover {
 						text-shadow: 2px 3px #ee991a55;
 					}
 				}
+
 				.footer__social-link {
 					text-align: center;
 					margin-top: 2rem;
@@ -719,6 +759,7 @@ html {
 			}
 		}
 	}
+
 	.footer__copy {
 		text-align: center;
 		border-top: 1px solid #222;
@@ -728,7 +769,7 @@ html {
 
 /* ============= Media Queries ============= */
 
-@media (width >= 768px) {
+@media (width >=768px) {
 	:root {
 		--header-height: 90px;
 		--normal-font-size: 18px;
@@ -746,11 +787,13 @@ html {
 				.navbar__list {
 					flex-direction: row;
 				}
+
 				.btn__close {
 					display: none;
 				}
 			}
 		}
+
 		.btn__open {
 			display: none;
 		}
@@ -823,13 +866,16 @@ html {
 
 	.skills {
 		.skills__container {
+
 			/* SLIDER  */
 			.skills__wrapper {
 				.skills__cards {
 					flex-direction: row;
+
 					.skills__cards-container {
 						height: 500px;
 						width: 130px;
+
 						&[open] {
 							height: 500px;
 							width: inherit;
